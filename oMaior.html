@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A volta do coder</title>
+</head>
+
+<body>
+    <script>
+        var primeiro_numero = Number(prompt("Olá, me fale um número"));
+        var segundo_numero = Number(prompt("Agora me fale outro"));
+
+        if (isNaN(primeiro_numero) || isNaN(segundo_numero)) {
+            alert("Agora até eu me perdi, culpa sua. Faça direito na próxima.");
+        } else {
+            if (primeiro_numero > segundo_numero) {
+                alert(primeiro_numero + " é maior que " + segundo_numero + ".");
+            } else if (primeiro_numero < segundo_numero) {
+                alert(segundo_numero + " é maior que " + primeiro_numero + ".");
+            } else {
+                alert("Ou você é idiota ou colocou dois números que são iguais, você escolhe.");
+            }
+        }
+        //Para de ler o meu código
+
+        var maior_ou_menor = Number(prompt("Vamos brincar de outra coisa, me fala um número."));
+
+        if (isNaN(maior_ou_menor)) {
+            alert("Agora até eu me perdi, culpa sua. Faça direito na próxima.");
+        } else {
+            if (maior_ou_menor > 0) {
+                alert("Esse número é positivo, com certeza.");
+            } else if (maior_ou_menor < 0) {
+                alert("Esse número é negativo, só acho.");
+            } else {
+                alert("Você colocou 0, não colocou?");
+            }
+
+            if (primeiro_numero > segundo_numero && primeiro_numero > maior_ou_menor) {
+                alert("E só pra você saber, " + primeiro_numero + " foi o maior número que você me escreveu.");
+            } else if (segundo_numero > primeiro_numero && segundo_numero > maior_ou_menor) {
+                alert("Para seu conhecimento, " + segundo_numero + " é o maior número que você me escreveu.");
+            } else if (maior_ou_menor > primeiro_numero && maior_ou_menor > segundo_numero) {
+                alert("O último número, vulgo " + maior_ou_menor + " foi o maior que você mandou até agora.");
+            } else {
+                alert("Meu mano, houve um empate entre seus números mesmo.");
+            }
+        }
+
+    </script>
+</body>
+
+</html>

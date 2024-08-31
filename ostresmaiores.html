@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var numer1 = Number(prompt("Olá, me diga um número"));
+        var numer2 = Number(prompt("Mais um número"));
+        var numer3 = Number(prompt("O último, prometo"));
+    
+        if (isNaN(numer1) || isNaN(numer2) || isNaN(numer3)) {
+            alert("Meu mano, tenta digitar númericamente, eu sei ler números.");
+        } else {
+            var maior1, maior2;
+    
+            if (numer1 >= numer2 && numer1 >= numer3) {
+                maior1 = numer1;
+                maior2 = Math.max(numer2, numer3);
+            } else if (numer2 >= numer1 && numer2 >= numer3) {
+                maior1 = numer2;
+                maior2 = Math.max(numer1, numer3);
+            } else {
+                maior1 = numer3;
+                maior2 = Math.max(numer1, numer2);
+            }
+    
+            var soma_dos_maiores = maior1 + maior2;
+            alert("Os dois maiores números são: " + maior1 + " e " + maior2 + ", a soma deles é " + soma_dos_maiores + ". Acertei né? ah mlkkkkk");
+        }
+    </script>
+    
+</body>
+
+</html>
