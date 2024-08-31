@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arimética pra frente</title>
+</head>
+<body>
+    <script>
+     var numer1 = Number(prompt("Olá, vou precisar de 6 números, me dá?"));
+     var numer2 = Number(prompt("Mais um"));
+     var numer3 = Number(prompt("Outro"));
+     var numer4 = Number(prompt("Esse é o quarto"));
+     var numer5 = Number(prompt("Esse é o quinto"))
+     var numer6 = Number(prompt("Esse é o último já, cê acredita?"));
+        if (isNaN(numer1) || isNaN(numer2) || isNaN(numer3) || isNaN(numer4) || isNaN(numer5) || isNaN(numer6)) {
+            alert("Meu mano, um ou mais desses número eu não entendi, faz o favor de melhorar.");
+        }
+        else {media = (numer1 + numer2 + numer3 + numer4 + numer5 + numer6) / 6;
+
+            var somaInferiores = 0;
+
+            if (numer1 < 72) somaInferiores += numer1;
+            if (numer2 < 72) somaInferiores += numer2;
+            if (numer3 < 72) somaInferiores += numer3;
+            if (numer4 < 72) somaInferiores += numer4;
+            if (numer5 < 72) somaInferiores += numer5;
+            if (numer6 < 72) somaInferiores += numer6;
+
+            var maior = Math.max(numer1, numer2, numer3, numer4, numer5, numer6);
+
+            alert("A média aritmética dos números que você me forneceu é " + media + ".");
+            alert("E pra variar, o primeiro número que você me disse é " + numer1 + ", o último é " + numer6 + ", agora o maioral deles é " + maior + ", confia.");
+            alert("Somando, temos " + numer1 + " + " + numer2 + " + " + numer3 + " + " + numer4 + " + " + numer5 + " + " + numer6 + " = " + (numer1 + numer2 + numer3 + numer4 + numer5 + numer6) + ". Entendeu?");
+            alert("A soma dos números inferiores a 72 é " + somaInferiores + ".")
+        }
+    </script>
+</body>
+</html>
