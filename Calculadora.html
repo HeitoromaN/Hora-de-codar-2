@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micro Calculadora</title>
+</head>
+
+<body>
+    <script>
+        function calcular(numero1, numero2, operacao) {
+            let resultado;
+            switch (operacao) {
+                case 1:
+                    resultado = numero1 + numero2;
+                    break;
+                case 2:
+                    resultado = numero1 - numero2;
+                    break;
+                case 3:
+                    if (numero2 === 0) {
+                        return "Não é possível dividir por zero. Animal.";
+                    }
+                    resultado = numero1 / numero2;
+                    break;
+                case 4:
+                    resultado = numero1 * numero2;
+                    break;
+                default:
+                    return "Não sei contar";
+            }
+            return `O resultado é: ${resultado}`;
+        }
+
+        const numero1 = parseInt(prompt("Digite o primeiro número inteiro:"));
+        const numero2 = parseInt(prompt("Digite o segundo número inteiro:"));
+        const operacao = parseInt(prompt("Escolha a operação (1 para adição, 2 para subtração, 3 para divisão, 4 para multiplicação):"));
+
+        if (isNaN(numero1) || isNaN(numero2)) {
+            alert("Por favor, vá se ferrar");
+        } else if (isNaN(operacao) || operacao < 1 || operacao > 4) {
+            alert("Por favor, escolha uma operação válida (1, 2, 3 ou 4).");
+        } else {
+            alert(calcular(numero1, numero2, operacao));
+        }
+    </script>
+</body>
+
+</html>
