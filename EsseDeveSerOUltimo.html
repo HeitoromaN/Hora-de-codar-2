@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esse deve ser o último</title>
+</head>
+
+<body>
+    <script>
+        var numer1 = Number(prompt("Olá, tudo bem? Me fale 4 números maiores que 0 e menores que 10."));
+        if (isNaN(numer1)) alert("Eu pedi um número, seu selvagem");
+        else if (numer1 >= 10 || numer1 <= 0) { alert("Mano, não pode ser maior que 10 nem menor que 0.") }
+        else {
+            var numer2 = Number(prompt("Fala outro"));
+            if (isNaN(numer2)) alert("Eu pedi um número, seu selvagem");
+            else if (numer2 >= 10 || numer2 <= 0) { alert("Mano, não pode ser maior que 10 nem menor que 0.") }
+            else {
+                var numer3 = Number(prompt("Mais um"));
+                if (isNaN(numer3)) alert("Eu pedi um número, seu selvagem");
+                else if (numer3 >= 10 || numer3 <= 0) { alert("Mano, não pode ser maior que 10 nem menor que 0.") }
+                else {
+                    var numer4 = Number(prompt("Esse é o último"));
+                    if (isNaN(numer4)) alert("Eu pedi um número, seu selvagem");
+                    else if (numer4 >= 10 || numer4 <= 0) { alert("Mano, não pode ser maior que 10 nem menor que 0.") }
+                    else {
+                        var media = ((numer1 + numer2 + numer3 + numer4) / 4);
+                        if (media > 5) { alert("Você passou, parabéns!") }
+                        else {
+                            (alert("Você é horrível"));
+                        }
+                    }
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
