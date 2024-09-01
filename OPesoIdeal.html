@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Peso Ideal</title>
+</head>
+<body>
+    <script>
+        function calcularPesoIdeal(altura, genero) {
+            let pesoIdeal;
+
+            if (genero === 1) {
+                pesoIdeal = (62.1 * altura) - 44.7;
+            } else if (genero === 2) {
+                pesoIdeal = (72 * altura) - 58;
+            } else {
+                return "Gênero inválido.";
+            }
+
+            return `Seu peso ideal é ${pesoIdeal.toFixed(2)} kg.`;
+        }
+
+        const altura = parseFloat(prompt("Digite sua altura em metros (ex: 1.75):"));
+        const genero = parseInt(prompt("Digite seu gênero (1 para feminino, 2 para masculino):"), 10);
+
+        if (isNaN(altura) || altura <= 0) {
+            alert("Por favor, insira uma altura válida.");
+        } else if (isNaN(genero) || (genero !== 1 && genero !== 2)) {
+            alert("Por favor, insira um gênero válido (1 para feminino, 2 para masculino).");
+        } else {
+            alert(calcularPesoIdeal(altura, genero));
+        }
+    </script>
+</body>
+</html>
