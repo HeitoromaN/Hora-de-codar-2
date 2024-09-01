@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Idade para Votação</title>
+</head>
+
+<body>
+    <script>
+        function podeVotar(anoNascimento) {
+            const anoAtual = new Date().getFullYear();
+            let idade;
+
+            if (anoNascimento <= 0) { // Anos antes de Cristo
+                idade = anoAtual - anoNascimento;
+            } else { // Anos depois de Cristo
+                idade = anoAtual - anoNascimento;
+            }
+
+            if (idade >= 16) {
+                return "Você pode votar este ano!";
+            } else if (idade < 0) {
+                return "Meu irmão, se você tivesse a idade que diz, não teria nem nascido ainda.";
+            } else {
+                return "Você ainda não pode votar este ano.";
+            }
+        }
+
+        const anoNascimento = Number(prompt("Digite o ano de nascimento (use números negativos para anos antes de Cristo):"));
+
+        if (isNaN(anoNascimento)) {
+            alert("Sai daqui mlk, vaza.");
+        } else {
+            alert(podeVotar(anoNascimento));
+        }
+    </script>
+</body>
+
+</html>
